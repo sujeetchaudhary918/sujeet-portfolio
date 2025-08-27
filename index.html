@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shikhar | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+    <a href="#home" class="logo">Shikhar Gupta</a>
+    <nav id="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+    <section class="home" id="home">
+    <div class="home-img">
+      <img src="main.jpg" alt="Profile Photo">
+    </div>
+    <div class="home-content">
+      <h1>Hi, I'm <span>Shikhar Gupta</span></h1>
+      <h3 class="typing-text">I'm a <span></span></h3>
+      <p class="home-bio">
+    Passionate developer who loves building creative web solutions.<br> 
+    Currently an engineering student exploring web development, DSA, and backend systems.
+</p>
+
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/shikhar-gupta-b77026309/" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/shikhar0713-dev" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+
+      <a href="#contact" class="btn">Hire Me</a>
+    </div>
+  </section>
+
+    <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript (ES6+), React.js, Responsive Web Design</li>
+      <li><strong>Backend:</strong> Node.js, Express.js, RESTful APIs</li>
+      <li><strong>Programming Languages:</strong> C++, Python</li>
+      <li><strong>Computer Science:</strong> Data Structures & Algorithms (DSA), OOPs, DBMS, OS, CN</li>
+      <li><strong>Tools & Platforms:</strong> Git, GitHub, VS Code, Linux, Postman</li>
+      <li><strong>Soft Skills:</strong> Problem-Solving, Team Collaboration, Adaptability</li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="edu-card card">
+      <h3>B.Tech CSE in Data Science</h3>
+      <span>Pranveer Singh Institute of Technology (PSIT), Kanpur, India | Sept 2023 – June 2027</span>
+      <ul>
+        <li>SGPA: 8.33 / 10.0</li>
+        <li>Relevant Coursework: DSA | DBMS | OS | Computer Networks</li>
+      </ul>
+    </div>
+  </section>
+
+
+    <section id="experience">
+    <h2>Experience</h2>
+    <div class="exp-card card">
+      <h3>PrepWise: AI Powered Interview Analyzer</h3>
+      <span>October 2023 - November 2023</span>
+      <p>
+        Developed a smart interview analyzer that uses AI to provide real-time feedback on interview performance, tone, and confidence.
+      </p>
+    </div>
+    <div class="exp-card card">
+      <h3>Network Traffic Analyzer</h3>
+      <span>July 2023 - August 2023</span>
+      <p>
+        Built a tool to analyze network traffic, monitor data flow, and identify potential security threats on a local network.
+      </p>
+    </div>
+    <div class="exp-card card">
+      <h3>(Space for future project)</h3>
+      <span></span>
+      <p></p>
+    </div>
+    <div class="exp-card card">
+      <h3>(Space for future project)</h3>
+      <span></span>
+      <p></p>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="contact-content">
+      <h2>Let's Connect</h2>
+      <p>I’m currently open to new opportunities. My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!</p>
+      <div class="social-links-contact">
+        <a href="https://github.com/shikhar0713-dev" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/shikhar-gupta-b77026309/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="contact-form">
+      <form action="https://formspree.io/f/meoloqrd" method="POST">
+        <label for="email">Your email</label>
+        <input type="email" id="email" name="email" placeholder="youremail@gmail.com" required>
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Just dropping a hi!" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Please leave your message......" required></textarea>
+        <button type="submit" class="send-btn">Send a Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>Shikhar Gupta</p>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+    </div>
+    <p>© 2025 Shikhar Gupta. All rights reserved.</p>
+  </footer>
+<script>
+    // mobile menu toggle
+    function toggleMenu() {
+      document.getElementById('navbar').classList.toggle('active');
+    }
+
+    // typing effect
+    const words = ["Web Developer", "Frontend Engineer", "Programmer", "Tech Enthusiast"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingSpan = document.querySelector(".typing-text span");
+
+    function type() {
+      let currentWord = words[wordIndex];
+
+      if (!isDeleting) {
+        typingSpan.textContent = currentWord.slice(0, ++charIndex);
+        if (charIndex === currentWord.length) {
+          isDeleting = true;
+          setTimeout(type, 2000); // wait 2s
+          return;
+        }
+      } else {
+        typingSpan.textContent = currentWord.slice(0, --charIndex);
+        if (charIndex === 0) {
+          isDeleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+        }
+      }
+      setTimeout(type, isDeleting ? 80 : 120);
+    }
+    document.addEventListener("DOMContentLoaded", type);
+
+    // highlight active nav link on scroll
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      const viewportHeight = window.innerHeight;
+      const middleOfViewport = window.scrollY + (viewportHeight / 2);
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        if (middleOfViewport >= sectionTop && middleOfViewport < sectionBottom) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").slice(1) === current) {
+        link.classList.add("active");
+        }
+      });
+    });
+</script>
+</body>
+</html>

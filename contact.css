@@ -1,0 +1,132 @@
+.contact-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5rem 9%;
+    min-height: 100vh;
+    gap: 4rem;
+}
+
+.contact-content {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+}
+
+.contact-content h2 {
+    text-align: left;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.contact-content p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+}
+
+.social-links-contact {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.social-links-contact a {
+    font-size: 3rem;
+    color: var(--primary-color);
+    transition: 0.3s ease;
+}
+
+.social-links-contact a:hover {
+    transform: scale(1.2);
+    color: var(--text-color);
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 500px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 1.6rem;
+    color: #ccc;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1.2rem;
+    margin-bottom: 2rem;
+    border: 1px solid #444;
+    background-color: #222;
+    color: white;
+    font-size: 1.6rem;
+    border-radius: 8px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.send-btn {
+    padding: 1.2rem 2.8rem;
+    background-color: #8A2BE2; /* A dark purple color */
+    color: white;
+    border-radius: 8px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.send-btn:hover {
+    background-color: #6A1EBC;
+}
+
+/* --- Footer Styling --- */
+footer {
+    padding: 2rem 9%;
+    text-align: center;
+    border-top: 1px solid #333;
+    font-size: 1.4rem;
+}
+
+.footer-links {
+    margin: 1rem 0;
+}
+
+.footer-links a {
+    color: var(--primary-color);
+    margin: 0 1rem;
+    font-size: 1.6rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-content {
+        text-align: center;
+    }
+    .contact-content h2 {
+        text-align: center;
+    }
+    .contact-content p {
+        text-align: center;
+    }
+    .social-links-contact {
+        justify-content: center;
+    }
+}
