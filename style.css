@@ -166,7 +166,11 @@ section p {
     background-color: var(--primary-color);
     box-shadow: 0 0 25px var(--primary-color);
 }
-
+.btn-box {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
 .btn {
     display: inline-block;
     padding: 1rem 2.8rem;
@@ -371,4 +375,11 @@ section p {
 /* --- Home Section --- */
 .home-content p.home-bio {
     font-size: 1.8rem;
+}
+#education {
+  padding-bottom: 30px; /* Adjust this value to reduce the space below the Education section */
+}
+
+#experience {
+  padding-top: 30px; /* Adjust this value to reduce the space above the Experience section */
 }
