@@ -80,7 +80,7 @@
 
 .send-btn {
     padding: 1.2rem 2.8rem;
-    background-color: #8A2BE2; /* A dark purple color */
+    background-color: #ea3039; /* A dark purple color */
     color: white;
     border-radius: 8px;
     font-size: 1.8rem;
@@ -90,7 +90,7 @@
 }
 
 .send-btn:hover {
-    background-color: #6A1EBC;
+    background-color: #ce213b;
 }
 
 /* --- Footer Styling --- */
